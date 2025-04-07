@@ -7,13 +7,15 @@ using UnityEngine.XR;
 public class PlayerController : MonoBehaviour
 {
     public float speed; 
+    public int maxHealth = 5;
+    int currentHealth;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -44,4 +46,11 @@ public class PlayerController : MonoBehaviour
         position.y = position.y + 0.1f * vertical ;
         transform.position = position;
     }
+
+    void ChangeHealth (int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
 }
