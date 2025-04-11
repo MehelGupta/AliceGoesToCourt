@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class OnClick : MonoBehaviour
 {
-    public GameObject onClickPopup;
+    public GameObject uiElement; // UI element to control
 
-    public void Click()
+    public void ToggleUIElement()
     {
-        onClickPopup.SetActive(true);
+        if (uiElement.activeSelf)
+        {
+            uiElement.SetActive(false); // Hide the UI element
+        }
+        else
+        {
+            uiElement.SetActive(true); // Show the UI element
+        }
     }
 }

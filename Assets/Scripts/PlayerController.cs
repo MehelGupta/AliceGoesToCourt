@@ -6,7 +6,8 @@ using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed; 
+    //player stats
+    public float speed;
     public int maxHealth = 5;
     int currentHealth;
 
@@ -21,36 +22,43 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Player movement
         float horizontal = 0.0f;
         float vertical = 0.0f;
-        if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             horizontal = -speed;
         }
-        if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             horizontal = speed;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             vertical = speed;
         }
-        if (Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             vertical = -speed;
         }
 
+
+
         Vector2 position = transform.position;
-        position.x = position.x + 0.1f * horizontal ;
-        position.y = position.y + 0.1f * vertical ;
+        position.x = position.x + 0.1f * horizontal;
+        position.y = position.y + 0.1f * vertical;
         transform.position = position;
+
     }
 
-    void ChangeHealth (int amount)
+    void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }
+
+
 
 }
