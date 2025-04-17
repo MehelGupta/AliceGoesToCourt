@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cba2a2fe114116408a186a1ef7d1a74
+guid: 45c3121bc66b9b248953c8e54585e11a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5931842347579807508
-    second: New Piskel-1.png_0
+      213: 4768706267377427728
+    second: Alicejumping3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel-1.png_0
+      name: Alicejumping3_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 25
         y: 2
-        width: 32
-        height: 25
+        width: 45
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4171d17df23225250800000000000000
-      internalID: 5931842347579807508
+      spriteID: 015e531a519dd2240800000000000000
+      internalID: 4768706267377427728
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel-1.png_0: 5931842347579807508
+      Alicejumping3_0: 4768706267377427728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

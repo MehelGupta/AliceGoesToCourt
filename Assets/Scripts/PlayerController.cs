@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.XR;
@@ -10,7 +11,11 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public int maxHealth = 5;
     int currentHealth;
-
+    //player animation
+    public Animator animator;
+    public Rigidbody2D rb;
+    private float horizontal;
+    private bool isFacingRight = false;
 
 
     // Start is called before the first frame update
@@ -23,40 +28,40 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Player movement
-        float horizontal = 0.0f;
-        float vertical = 0.0f;
+        horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        
+        rb.velocity = new Vector2(horizontal * speed, vertical * speed) * Time.deltaTime;
+        
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if(vertical != 0 || horizontal != 0)
         {
-            horizontal = -speed;
+            animator.SetBool("IsWalking", true);
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else
         {
-            horizontal = speed;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            vertical = speed;
-        }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            vertical = -speed;
+            animator.SetBool("IsWalking", false);
         }
 
-
-
-        Vector2 position = transform.position;
-        position.x = position.x + 0.1f * horizontal;
-        position.y = position.y + 0.1f * vertical;
-        transform.position = position;
-
+        Flip();
+        
     }
 
     void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 
 

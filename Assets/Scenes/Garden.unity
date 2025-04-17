@@ -9097,7 +9097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 170.84998, y: -179.21997}
+  m_AnchoredPosition: {x: 170.84961, y: -179.21973}
   m_SizeDelta: {x: 70.579956, y: 81.869995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786858332
@@ -10061,7 +10061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volume
+  m_Text: Journal
 --- !u!222 &1294272449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10169,7 +10169,7 @@ GameObject:
   - component: {fileID: 1380408720}
   - component: {fileID: 1380408719}
   m_Layer: 5
-  m_Name: Volume
+  m_Name: Journal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10903,6 +10903,7 @@ GameObject:
   - component: {fileID: 2074395007}
   - component: {fileID: 2074395008}
   - component: {fileID: 2074395009}
+  - component: {fileID: 2074395010}
   m_Layer: 0
   m_Name: Player_WhiteRabbit
   m_TagString: Player
@@ -10972,8 +10973,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074395004}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.89, y: -0.93, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.9195831}
   m_LocalScale: {x: 2.302746, y: 2.302746, z: 2.302746}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10991,8 +10992,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c9a0789061a124db31a1feac2e76c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
+  speed: 2000
   maxHealth: 5
+  animator: {fileID: 2074395010}
+  rb: {fileID: 2074395008}
 --- !u!50 &2074395008
 Rigidbody2D:
   serializedVersion: 4
@@ -11066,6 +11069,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.59, y: 0.99}
   m_EdgeRadius: 0
+--- !u!95 &2074395010
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074395004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b771000c4fe22ac4f8be161c9b505055, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2102196741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11185,7 +11210,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 2074395006}
   - {fileID: 813232557}
   - {fileID: 396017278}
   - {fileID: 1253434610}
+  - {fileID: 2074395006}
