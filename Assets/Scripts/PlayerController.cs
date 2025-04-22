@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         
-        rb.velocity = new Vector2(horizontal * speed, vertical * speed) * Time.deltaTime;
+        //maybe add time delta time idk
+        rb.velocity = new Vector2(horizontal * speed, vertical * speed);
         
 
         if(vertical != 0 || horizontal != 0)
