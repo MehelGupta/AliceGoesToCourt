@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cba2a2fe114116408a186a1ef7d1a74
+guid: f62eee3ad911f1342a376b5a7ed9dc06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5931842347579807508
-    second: New Piskel-1.png_0
+      213: 7853156636415290445
+    second: WhiteRabbitSprite - Copy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel-1.png_0
+      name: WhiteRabbitSprite - Copy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 32
-        height: 25
+        x: 19
+        y: 9
+        width: 59
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4171d17df23225250800000000000000
-      internalID: 5931842347579807508
+      spriteID: d4ce80f5a540cfc60800000000000000
+      internalID: 7853156636415290445
       vertices: []
       indices: 
       edges: []
@@ -123,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cb463dd53ed4efa4b8091cf1f8def7b3
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel-1.png_0: 5931842347579807508
+      WhiteRabbitSprite - Copy_0: 7853156636415290445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
