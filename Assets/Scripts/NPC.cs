@@ -6,12 +6,15 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, NPCInteractable 
 {
+    public NPCDialogue dialougeData;
+    public Image portraitImage;
     public GameObject dialoguePanel;
     public Text dialogueText;
     public string[] dialogue;
     private int index;
+    private bool isTyping, isDialougeActive;
     public GameObject contButton;
     public float wordSpeed;
     public bool playerIsClose;
@@ -88,5 +91,19 @@ public class NPC : MonoBehaviour
         {
             playerIsClose = false;
         }
+    }
+
+    public void Interact()
+    {
+        if(dialougeData == null) || (!isDialougeActive)
+        {
+
+        }
+        return;
+    }
+
+    public bool CanInteract()
+    {
+        return !isDialougeActive;
     }
 }
