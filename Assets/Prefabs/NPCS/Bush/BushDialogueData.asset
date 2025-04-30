@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff698d72588750b458789338f5c7ffcd, type: 3}
-  m_Name: NewNPCDialouge
+  m_Name: BushDialogueData
   m_EditorClassIdentifier: 
-  npcName: 
-  npcPortrait: {fileID: 0}
-  dialogueLines: []
+  npcName: BushBush
+  npcPortrait: {fileID: 5931842347579807508, guid: 9cba2a2fe114116408a186a1ef7d1a74, type: 3}
+  dialogueLines:
+  - yea you
+  - have you seen my teapot?
+  - In the madness of it all I've seem to lost it.
+  - If you see it come back to me
+  autoProgressLines: 01010100
+  autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
-  autoProgressLines: 
-  autoProgressDelay: 1.5
+  npcTextColor: {r: 0.54901963, g: 0.70980394, b: 0.91372555, a: 0}
