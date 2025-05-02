@@ -24,4 +24,4 @@ MonoBehaviour:
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
-  npcTextColor: {r: 0.54901963, g: 0.70980394, b: 0.91372555, a: 0}
+  npcTextColor: {r: 0.41960788, g: 0.61960787, b: 0.16078432, a: 1}

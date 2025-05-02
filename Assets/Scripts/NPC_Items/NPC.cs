@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour, NPCInteractable 
 {
+    public float typingSpeed;
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public Text dialogueText, nameText;
@@ -19,9 +20,10 @@ public class NPC : MonoBehaviour, NPCInteractable
     public void Interact()
     {
         Debug.Log("INteracting");
+        /*
         if (dialogueData == null || !isDialougeActive)
             return;
-
+        */
         if (isDialougeActive)
         {
             NextLine();
@@ -80,7 +82,7 @@ public class NPC : MonoBehaviour, NPCInteractable
         foreach(char letter in dialogueData.dialogueLines[index])
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
@@ -99,5 +101,10 @@ public class NPC : MonoBehaviour, NPCInteractable
         dialogueText.text = "";
         dialoguePanel.SetActive(false);
 
+    }
+
+    public void setTypingSpeed (float typingSpeeds)
+    {
+        typingSpeed = typingSpeeds;
     }
 }
