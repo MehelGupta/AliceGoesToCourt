@@ -7,4 +7,5 @@ public interface NPCInteractable
     public void Interact();
     
     bool CanInteract();
+    public void EndDialogue();
 }

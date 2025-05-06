@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionDetector : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class InteractionDetector : MonoBehaviour
         {
             interactableRange?.Interact();
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -36,6 +38,7 @@ public class InteractionDetector : MonoBehaviour
         {
             interactableRange = null;
             interactionIcon.SetActive(false);
+            interactable.EndDialogue();
         }
     }
 }

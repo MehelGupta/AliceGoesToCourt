@@ -16,6 +16,7 @@ public class NPC : MonoBehaviour, NPCInteractable
     public Image portraitImage;
     private int index;
     private bool isTyping, isDialougeActive;
+    private bool autoSkipOverride = false;
 
     public void Interact()
     {
@@ -41,6 +42,7 @@ public class NPC : MonoBehaviour, NPCInteractable
 
     void StartDialogue()
     {
+        //typingSpeed = 1 - typingSpeed;
         isDialougeActive = true;
         index = 0;
 
@@ -82,12 +84,12 @@ public class NPC : MonoBehaviour, NPCInteractable
         foreach(char letter in dialogueData.dialogueLines[index])
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(1-typingSpeed);
         }
 
         isTyping = false;
 
-        if(dialogueData.autoProgressLines.Length > index && dialogueData.autoProgressLines[index])
+        if((dialogueData.autoProgressLines.Length > index && dialogueData.autoProgressLines[index]) && autoSkipOverride == false)
         {
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
@@ -106,5 +108,10 @@ public class NPC : MonoBehaviour, NPCInteractable
     public void setTypingSpeed (float typingSpeeds)
     {
         typingSpeed = typingSpeeds;
+    }
+
+    public void setAutoSkipOverride(bool skip)
+    {
+        autoSkipOverride = skip;
     }
 }
