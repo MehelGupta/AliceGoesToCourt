@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,10 @@ public class InteractionDetector : MonoBehaviour
             interactableRange?.Interact();
         }
         
+    }
+    public void skipDialogue()
+    {
+        interactableRange?.Interact();
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -14,15 +14,14 @@ public class NPC : MonoBehaviour, NPCInteractable
     public GameObject dialoguePanel;
     public Text dialogueText, nameText;
     public Image portraitImage;
-    public Button skipButton;
+   
     private int index;
     private bool isTyping, isDialougeActive;
     private bool autoSkipOverride = false;
 
-
-    private void Update()
+    public void ButtonClicked()
     {
-    
+        
     }
     public void Interact()
     {
