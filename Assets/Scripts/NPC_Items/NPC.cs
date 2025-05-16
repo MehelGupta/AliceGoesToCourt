@@ -14,7 +14,6 @@ public class NPC : MonoBehaviour, NPCInteractable
     public GameObject dialoguePanel;
     public Text dialogueText, nameText;
     public Image portraitImage;
-   
     private int index;
     private bool isTyping, isDialougeActive;
     private bool autoSkipOverride = false;
@@ -94,7 +93,7 @@ public class NPC : MonoBehaviour, NPCInteractable
 
         isTyping = false;
 
-        if((dialogueData.autoProgressLines.Length > index && dialogueData.autoProgressLines[index]) && autoSkipOverride == false)
+        if((dialogueData.autoProgressLines.Length > index && dialogueData.autoProgressLines[index]) && autoSkipOverride == true)
         {
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
@@ -117,6 +116,7 @@ public class NPC : MonoBehaviour, NPCInteractable
 
     public void setAutoSkipOverride(bool skip)
     {
+        Debug.Log(skip);
         autoSkipOverride = skip;
     }
 }
