@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff698d72588750b458789338f5c7ffcd, type: 3}
+  m_Name: AliceDialouge
+  m_EditorClassIdentifier: 
+  npcName: Alice
+  npcPortrait: {fileID: 1484112224491075433, guid: ffb769a0a24a89c47836da0b611bf164, type: 3}
+  dialogueLines:
+  - omg
+  - IM GOING TO JAILLL
+  autoProgressLines: 
+  autoProgressDelay: 1.5
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  npcTextColor: {r: 0.40784317, g: 0.5529412, b: 0.5803922, a: 0}

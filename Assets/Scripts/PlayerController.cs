@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     private float horizontal;
     private bool isFacingRight = false;
+    //Visual
+    public SpriteRenderer exclamationMark;
 
 
     // Start is called before the first frame update
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
+            exclamationMark.flipX = isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;

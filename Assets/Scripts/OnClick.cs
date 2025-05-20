@@ -4,17 +4,57 @@ using UnityEngine;
 
 public class OnClick : MonoBehaviour
 {
-    public GameObject uiElement; // UI element to control
+    public GameObject mainMenu; // UI element to control
+    public GameObject settingsMenu; // UI element to control
+    public GameObject controlsMenu; // UI element to control
 
-    public void ToggleUIElement()
+    public GameObject journalMenu; // UI element to control
+    public GameObject dialougeScreen;
+    private bool isDialougeActive;
+    private void Update()
     {
-        if (uiElement.activeSelf)
-        {
-            uiElement.SetActive(false); // Hide the UI element
-        }
+        if (dialougeScreen.activeSelf)
+            isDialougeActive = true;
         else
+            isDialougeActive = false;
+    }
+
+
+    public void BackButton()
+    {
+        if (settingsMenu.activeSelf)
         {
-            uiElement.SetActive(true); // Show the UI element
+            settingsMenu.SetActive(false);
         }
+        else if(controlsMenu.activeSelf)
+        {
+            controlsMenu.SetActive(false);
+        }
+        else if(journalMenu.activeSelf)
+        {
+            journalMenu.SetActive(false);
+        }
+        else if(mainMenu.activeSelf)
+        {
+            mainMenu.SetActive(false);
+        }
+        
+    }
+    public void openSettings()
+    {
+        settingsMenu.SetActive(true);
+    }
+    public void openJournal()
+    {
+        journalMenu.SetActive(true);
+    }
+    public void openControls()
+    {
+        controlsMenu.SetActive(true);
+    }
+    public void openMainMenu()
+    {
+        if(isDialougeActive == false)
+            mainMenu.SetActive(true);
     }
 }
