@@ -15,10 +15,13 @@ MonoBehaviour:
   npcName: Alice
   npcPortrait: {fileID: 1484112224491075433, guid: ffb769a0a24a89c47836da0b611bf164, type: 3}
   dialogueLines:
-  - omg
-  - IM GOING TO JAILLL
-  autoProgressLines: 
+  - I need your help!
+  - I've been falsely accused of killing the Mad Hatter!
+  - I need you to collect evidence and figure out who did it.
+  - 'You can start by talking to the party guests. '
+  - Take this seriously my head is on the line!
+  autoProgressLines: 01
   autoProgressDelay: 1.5
   voiceSound: {fileID: 0}
   voicePitch: 1
-  npcTextColor: {r: 0.40784317, g: 0.5529412, b: 0.5803922, a: 0}
+  npcTextColor: {r: 0.19607845, g: 0.2627451, b: 0.32941177, a: 0}

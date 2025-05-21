@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = false;
     //Visual
     public SpriteRenderer exclamationMark;
+    //quest
+    private bool nearQuestItem = false;
+    private GameObject questItem;
 
 
     // Start is called before the first frame update
@@ -32,12 +35,12 @@ public class PlayerController : MonoBehaviour
         //Player movement
         horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        
+
         //maybe add time delta time idk
         rb.velocity = new Vector2(horizontal * speed, vertical * speed);
-        
 
-        if(vertical != 0 || horizontal != 0)
+
+        if (vertical != 0 || horizontal != 0)
         {
             animator.SetBool("IsWalking", true);
         }
@@ -46,8 +49,14 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", false);
         }
 
+        //control E
+        if(Input.GetKey(KeyCode.E) && nearQuestItem)
+        {
+            questItem.SetActive(false);
+        }
+
         Flip();
-        
+
     }
 
     void ChangeHealth(int amount)
@@ -66,6 +75,29 @@ public class PlayerController : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+        if(collision.tag == "questItem")
+        {
+            nearQuestItem = true;
+            questItem = collision.gameObject;
+        }
+        
+        
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        if(collision.tag == "questItem")
+        {
+            nearQuestItem = false;
+            questItem = null;
+        }
+        
+        
     }
 
 

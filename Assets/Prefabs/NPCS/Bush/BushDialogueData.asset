@@ -15,13 +15,17 @@ MonoBehaviour:
   npcName: BushBush
   npcPortrait: {fileID: 5931842347579807508, guid: 9cba2a2fe114116408a186a1ef7d1a74, type: 3}
   dialogueLines:
-  - yea you
-  - have you seen my teapot?
-  - In the madness of it all I've seem to lost it.
-  - If you see it come back to me
-  autoProgressLines: 01010100
+  - you found it!
+  - thats great :)
+  - oh...you wanna know what its for?
+  - hmmm ok Ill tell you.
+  - well between you and me...
+  - Alice actually borrowed it from me before the party.
+  - She wanted to use it for something.
+  - I promise she didn't kill the Mad Hatter though! That isn't like her.
+  - Good luck on your search for the culprit!
+  autoProgressLines: 0100010101010101
   autoProgressDelay: 1.5
-  typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
-  npcTextColor: {r: 0.41960788, g: 0.61960787, b: 0.16078432, a: 1}
+  npcTextColor: {r: 0.10588236, g: 0.20000002, b: 0.14509805, a: 1}
